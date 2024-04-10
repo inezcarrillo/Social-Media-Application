@@ -28,4 +28,4 @@ const thoughtSchema = new Schema(
     }
 );
 
-builtinModules.exports = thoughtSchema;
+modules.exports = thoughtSchema;
