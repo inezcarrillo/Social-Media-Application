@@ -18,6 +18,17 @@ const thoughtController = {
             res.status(500).json(err);
         }
     },
+    async getThoughtId(req, res) {
+        try {
+            const thoughts = await User.findOne({ _id: req.params.thoughtId });
+            if (!user) {
+                return res.status(404).json({ message: 'User not found' });
+            }
+            res.json(thoughts);
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
 
     async deleteThought(req, res) {
         try {
